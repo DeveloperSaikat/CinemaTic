@@ -1,0 +1,236 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">CinemaTic</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav justify-content-end mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/browse']">Movies</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/tvseries']">Tv Series</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/kids']">Kids</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              MSearch
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item"  [routerLink]="['/moviesearch']">By Name</a>
+              <a class="dropdown-item" [routerLink]="['/movieyear']">By Year</a>
+              <a class="dropdown-item" [routerLink]="['/people']" >By Performer</a>            
+            </div>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/tvsearch']">TvSearch</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="./assets/img/bat.jpg" alt="First slide">
+      <div class="container">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Movies in theatres.</h1>
+          <p>Find out the recently released movies being screened on theatres. Every hollywood movie that releases gets updated on our database. </p>
+          <p><a class="btn btn-lg btn-primary" [routerLink]="['/browse']" role="button">Learn more</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./assets/img/aven.jpg" alt="Second slide">
+      <div class="container">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Popular movies based on year.</h1>
+          <p>Based on the year you provide as input, we will display you the most popular movies of that year. Personalisation simplified.</p>
+          <p><a class="btn btn-lg btn-primary" [routerLink]="['/movieyear']" role="button">Learn more</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./assets/img/mis.jpg" alt="Third slide">
+      <div class="container">
+        <div class="carousel-caption text-left d-none d-md-block">
+          <h1>Find phenomenal performances.</h1>
+          <p>With the help of our website you can find the top three highly acclaimed performances by your favourite actor.</p>
+          <p><a class="btn btn-lg btn-primary" [routerLink]="['/people']" role="button">Learn more</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./assets/img/got.jpg" alt="Fourth slide">
+      <div class="container">
+        <div class="carousel-caption text-right d-none d-md-block">
+          <h1>Popular TV Series</h1>
+          <p>From this platform you can find out the popular Tv Series that are being screened. We provide you the necessary details.</p>
+          <p><a class="btn btn-lg btn-primary" [routerLink]="['/tvseries']" role="button">Learn more</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./assets/img/nar.jpg" alt="Fifth slide">
+      <div class="container">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Get to know the series</h1>
+          <p>From this platform you can search for your favourite Tv series and find out how much they have been linked by others.</p>
+          <p><a class="btn btn-lg btn-primary" [routerLink]="['/tvsearch']" role="button">Learn more</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="album py-5 bg-light">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" src="./assets/img/lo.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Find the popular movies at ease. We provide a global list which means that as a user you will get to know the highly anticipated movies all over the world.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a class="btn btn-lg btn-primary" [routerLink]="['/browse']" role="button">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" src="./assets/img/harry.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">This website provide a list of movies that are specially made for kids under the age of 13. This feature is made addressing the issues of violence, harsh words,etc.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a class="btn btn-lg btn-primary" [routerLink]="['/kids']" role="button">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" src="./assets/img/stel.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">We always keep our results updated, which means as a user you will always get the most up to date results. Thus providing 100% satisfaction.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a class="btn btn-lg btn-primary" [routerLink]="['/browse']" role="button">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" src="./assets/img/ins.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">This website provides you with rich content focussing on the satisfaction among the users. Through this website you can get the information about every genre.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a class="btn btn-lg btn-primary" [routerLink]="['/browse']" role="button">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" src="./assets/img/pir.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">This website gives you the opportunity to look out for the best performances by your favourite actor. We provide you the 3 most liked movies by that actor.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a class="btn btn-lg btn-primary" [routerLink]="['/people']" role="button">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" src="./assets/img/ho.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Don't miss out the classics that were considered as masterpieces of their time. And to help you with that, there is a section which lets you find movies by year.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a class="btn btn-lg btn-primary" [routerLink]="['/movieyear']" role="button">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" src="./assets/img/sherl.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Tv Series are gaining popularity day by day and to help you with that we have a section which focuses on Tv Series specifically. Find the most popular Tv series there.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a class="btn btn-lg btn-primary" [routerLink]="['/tvseries']" role="button">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" src="./assets/img/ww.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Everyone loves to watch the best that is available thus our search focuses on the overall popularity. This website through some calculation provides the best results.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a class="btn btn-lg btn-primary" [routerLink]="['/moviesearch']" role="button">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" src="./assets/img/go.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Find your favourite Tv series and get an overview. We provide the best summary that will help you to get an overview about the series and the rating to interest you.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a class="btn btn-lg btn-primary" [routerLink]="['/tvsearch']" role="button">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="fcontainer">
+    <span>Developed By: Saikat Kundu</span>
+  </div>
+</footer>

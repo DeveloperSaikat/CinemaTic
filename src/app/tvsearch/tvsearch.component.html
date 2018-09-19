@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">CinemaTic</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav justify-content-end mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/browse']">Movies</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/tvseries']">Tv Series</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/kids']">Kids</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              MSearch
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item"  [routerLink]="['/moviesearch']">By Name</a>
+              <a class="dropdown-item" [routerLink]="['/movieyear']">By Year</a>
+              <a class="dropdown-item" [routerLink]="['/people']">By Performer</a>            
+            </div>
+          </li>
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/tvsearch']">TvSearch</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="jumbotron">
+  <h1 class="display-4 mar">Hello, User!</h1>
+  <p class="lead" style="font-weight:400">This section focuses on movies that are specifically made for kids or children under the age of 13. This section comprises of all kinds of movies but are categorised keeping in mind the content of that movie.</p>
+  <hr class="my-4">
+  <p>For more movie related content go to the browse section.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" [routerLink]="['/browse']" role="button">Browse</a>
+  </p>
+</div>
+<h3 style="text-align:center">Search your TV series</h3>
+<div class="album py-5 bg-light">
+    <div class="container">
+        <form class="col-md-8 offset-md-2" [formGroup]="tvForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label>Search Tv Series</label>
+              <input type="text" class="form-control" formControlName="tv" placeholder="Enter name">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <br><br>
+          <div class="row">
+              <div class="card col-md-4 box-shadow" *ngFor="let studs of search">
+                  <img class="card-img-top" src="http://image.tmdb.org/t/p/w500//{{studs.poster_path}}" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">{{studs.title}}</h5>
+                    <p class="card-text">{{studs.overview}}</p>
+                    <p class="card-text">Rate: {{studs.vote_average}}</p>
+                    <p class="card-text">Release: {{studs.release_date | date}}</p>
+                  </div>
+                </div>
+            </div> 
+    </div>
+  </div>
+
+<footer class="footer">
+    <div class="fcontainer">
+      <span>Developed By: Saikat Kundu</span>
+    </div>
+  </footer>

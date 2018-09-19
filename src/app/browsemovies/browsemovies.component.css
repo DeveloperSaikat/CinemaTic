@@ -1,0 +1,30 @@
+nav{
+    background-color: rgba(116, 116, 116, 0.6);
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+.navbar-brand{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.mar{
+    margin-top: 25px;
+}
+
+.jumbotron{
+    background-image: url("int.jpg");
+    background-size: cover;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+.card{
+    margin-bottom: 20px;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);   
+}
+.fcontainer {
+    width: auto;
+    max-width: 1580px;
+    padding: 0 15px;
+    text-align: center;
+    background-color: grey;
+    color: white;
+}
